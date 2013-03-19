@@ -3,11 +3,6 @@ var adapter, store;
 module("Site Store", {
     setup: function() {
         Ember.Namespace.create({ name: 'Site' });
-        /*
-        DS.Adapter.configure('Site.Article', {
-            primaryKey: "_id"
-        });
-        */
         adapter = DS.FixtureAdapter.extend();
         store = DS.Store.create({ 
             adapter: adapter, 
