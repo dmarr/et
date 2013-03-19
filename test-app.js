@@ -28,15 +28,10 @@ App.Router.map(function() {
     this.resource('articles');
 });
 
-App.ApplicationRoute = Ember.Route.extend({
+App.IndexRoute = Ember.Route.extend({
     setupController: function() {
         this.controllerFor('index').set('model',
             App.Article.find()
         );    
     }
 });
-
-App.ArticlesController = Ember.ArrayController.extend();
-
-App.ArticleController = Ember.ObjectController.extend();
-    
