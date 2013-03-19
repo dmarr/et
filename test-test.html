@@ -9,12 +9,11 @@
     <script src="lib/handlebars-1.0.0.rc.3.js"></script>
     <script src="lib/ember-1.0.0-rc.1.js"></script>
     <script src="lib/ember-data.js"></script>
-        <script type="text/x-handlebars" data-template-name="index">
+    <script type="text/x-handlebars" data-template-name="index">
         {{ render "articles" model }}
-        {{ log  }}
     </script>
     <script type="text/x-handlebars" data-template-name="articles">
-        {{#each controller.model }}
+        {{#each controller }}
             {{ id }}
         {{else}}
             <h2>Please select an article</h2>
