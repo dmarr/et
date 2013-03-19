@@ -3,12 +3,16 @@ var adapter, store;
 module("Site Store", {
     setup: function() {
         Ember.Namespace.create({ name: 'Site' });
+        /*
         DS.Adapter.configure('Site.Article', {
             primaryKey: "_id"
         });
-        store = DS.Store.create({ adapter: "DS.FixtureAdapter", revision: 12 });
+        */
+        adapter = DS.FixtureAdapter.extend();
+        store = DS.Store.create({ adapter: adapter, revision: 12 });
     },
     teardown: function() {
+        adapter.destroy();
         store.destroy();
     }
 });
