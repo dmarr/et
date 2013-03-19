@@ -24,3 +24,19 @@ App.Author.FIXTURES = [
   { id: 1, displayName: 'author 1', article_ids: [1,2] }
 ];
 
+App.Router.map(function() {
+    this.resource('articles');
+});
+
+App.ApplicationRoute = Ember.Route.extend({
+    setupController: function() {
+        this.controllerFor('index').set('model',
+            App.Article.find()
+        );    
+    }
+});
+
+App.ArticlesController = Ember.ArrayController.extend();
+
+App.ArticleController = Ember.ObjectController.extend();
+    

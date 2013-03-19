@@ -10,14 +10,15 @@
     <script src="lib/ember-1.0.0-rc.1.js"></script>
     <script src="lib/ember-data.js"></script>
     <script src="test-app.js"></script>
-    <script>
-      Ember.run(function() {
-
-        var article = App.Article.find(1);
-        var author = article.get('author');
-
-        console.log(author.get('displayName'));
-      });
+    <script type="text/x-handlebars" data-template-name="index">
+        {{ render "articles" model }}
+    </script>
+    <script type="text/x-handlebars" data-template-name="articles">
+        {{#each controller }}
+            {{ id }}
+        {{else}}
+            <h2>Please select an article</h2>
+        {{/each}}
     </script>
 </body>
 </html>

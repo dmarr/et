@@ -9,7 +9,10 @@ module("Site Store", {
         });
         */
         adapter = DS.FixtureAdapter.extend();
-        store = DS.Store.create({ adapter: adapter, revision: 12 });
+        store = DS.Store.create({ 
+            adapter: adapter, 
+            revision: 12
+        });
     },
     teardown: function() {
         adapter.destroy();
