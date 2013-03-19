@@ -47,10 +47,15 @@ test('loading json', function() {
     });
 
     var author = store.find(Site.Author, 22);
+    article.set('author', author);
+
+    store.commit();
+
     equal(author.get('displayName'), 'David Marr', 'Author is found.');
     equal(article.get('author.displayName'), 'David Marr', 'Author is found on Article.');
 
     author.set('displayName', "dmarr");
+
     equal(author.get('displayName'), 'dmarr', 'Author is set');
     equal(article.get('author.displayName'), "dmarr", "Author is set on Article");
 });
