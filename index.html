@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="lib/qunit/qunit.css">
+</head>
+<body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="lib/jquery-1.8.3.min.js"></script>
+    <script src="lib/handlebars-1.0.0.rc.3.js"></script>
+    <script src="lib/ember-1.0.0-rc.1.js"></script>
+    <script src="lib/ember-data.js"></script>
+    <script>
+        window.Site = Ember.Application.create({
+           LOG_TRANSITIONS: true
+        }); 
+    </script>
+    <script src="lib/qunit/qunit.js"></script>
+    <script src="lib/sinon-1.6.0.js"></script>
+    <script src="test-models.js"></script>
+    <script src="test-store.js"></script>
+    <!--script src="orion-models.js"></script>-->
+    <script>
+        DS.Store.reopen({"revision": 12});
+    </script>
+</body>
+</html>
