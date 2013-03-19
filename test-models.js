@@ -8,7 +8,7 @@ Site.Article = DS.Model.extend({
     locale: DS.attr('string'),
     deck: DS.attr('string'),
     section: DS.attr('string'),
-    author: DS.belongsTo('Site.Author'),
+    author: DS.belongsTo('Site.Author', { embedded: true }),
     assigneeId: DS.attr('string'),
     status: DS.attr('string'),
     body: DS.attr('string'),
