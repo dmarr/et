@@ -12,7 +12,7 @@ Site.Article = DS.Model.extend({
     assigneeId: DS.attr('string'),
     status: DS.attr('string'),
     body: DS.attr('string'),
-  //  tags: DS.attr('tags'),
+    tags: DS.attr('tags'),
     allowComments: DS.attr('boolean'),
     mediaPropertyId: DS.attr('string'),
     publishedAt: DS.attr('date'),

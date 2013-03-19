@@ -38,7 +38,7 @@ test('loading json', function() {
 
     var article = store.find(Site.Article, 893); 
     equal(article.get('type'), 'news', 'Store loads article type');
-
+    equal(article.get('tags').length, 2, 'Tags array is set to an array.');
     store.load(Site.Author, {
         id: 22, displayName: "David Marr", article_ids: [893]
     });
