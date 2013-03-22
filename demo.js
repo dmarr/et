@@ -58,7 +58,7 @@ App.ArticlesController = Ember.ArrayController.extend({
     if (self.get('canLoadMore')) {
       self.set('isLoading', true);
       $.getJSON('articles.json', function(data) {
-        self.get('store').load(self.type, data);
+        self.get('store').load(App.Article, data);
       }).then(function() {
         self.set('isLoading', false);
       });
