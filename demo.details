@@ -8,3 +8,5 @@ authors:
 resources:
   - //cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js
   - //cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.min.js
+  - https://dmarr.github.com/et/jquery.inview.js
+  - https://dmarr.github.com/et/ember.data.js
