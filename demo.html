@@ -1,0 +1,26 @@
+<script type="text/x-handlebars" data-template-name="index">
+  {{ render "articles" model }}
+</script>
+<script type="text/x-handlebars" data-template-name="articles">
+  <a {{ action "add" }}>add article</a>
+  {{#each controller }}
+      <section>
+          <div class="promoImage">{{{ promoImage }}}</div>
+          <div class="promoHeadline">{{ promoHeadline }}</div>
+          <article>{{{ body }}}</article>
+      </section>
+  {{/each}}
+  {{view Ember.LoadMoreView }}
+</script>
+<script type="text/x-handlebars" data-template-name="loadMore">
+    {{#if isLoading}}
+        <p class="loading">loading...</p>
+    {{else}}
+        {{#if canLoadMore}}
+            <a {{action "loadMore" target="controller" }}>click to load more items</a>
+        {{else}}
+            <i>no more items</i>
+        {{/if}}
+    {{/if}}
+</script>
+
