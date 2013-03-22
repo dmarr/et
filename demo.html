@@ -2,8 +2,7 @@
   {{ render "articles" model }}
 </script>
 <script type="text/x-handlebars" data-template-name="articles">
-  <a {{ action "add" }}>add article</a>
-  {{#each controller }}
+   {{#each controller }}
       <section>
           <div class="promoImage">{{{ promoImage }}}</div>
           <div class="promoHeadline">{{ promoHeadline }}</div>
