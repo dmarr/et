@@ -1,7 +1,7 @@
 et
 ==
 
-Fork [this|https://github.com/dmarr/et] repo and share jsfiddle-ready demos.
+Fork [this](https://github.com/dmarr/et) repo and share jsfiddle-ready demos.
 
 Using the method described here: http://doc.jsfiddle.net/use/github_read.html
 
