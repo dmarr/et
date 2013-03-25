@@ -8,8 +8,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.1/ember.min.js"></script>
-    <script src="http://dmarr.github.com/et/jquery.inview.js"></script>
-    <script src="http://dmarr.github.com/et/ember-data.js"></script>
+    <script src="jquery.inview.js"></script>
+    <script src="ember-data.js"></script>
     <script type="text/x-handlebars" data-template-name="index">
       {{ render "articles" model }}
     </script>
@@ -17,6 +17,7 @@
       <a {{ action "add" }}>add article</a>
       {{#each controller }}
           <section>
+              {{ id }}
               <div class="promoImage">{{{ promoImage }}}</div>
               <div class="promoHeadline">{{ promoHeadline }}</div>
               <article>{{{ body }}}</article>
